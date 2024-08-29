@@ -1,0 +1,361 @@
+:root {
+  /* WARNAAA */
+  --primer: #ffffff;
+  --secondary: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "DM Serif Display";
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #a7a5a5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.navbar .navbar-nav a {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.25rem;
+  margin: 0 1rem;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* media queueries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* display (800px) */
+@media (max-width: 800px) {
+  html {
+    font-size: 68%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+    color: #ffffff;
+  }
+  /* sidebar */
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 12rem;
+    height: 13vh;
+    transition: 0.2s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0%;
+  }
+  .navbar .navbar-nav a {
+    color: #010101;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62, 5%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+    color: #ffffff;
+  }
+  /* sidebar */
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 12rem;
+    height: 13vh;
+    transition: 0.2s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0%;
+  }
+  .navbar .navbar-nav a {
+    color: #010101;
+  }
+}
+
+/* tablet lagi kali */
+@media (max-width: 620px) {
+  html {
+    font-size: 50%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+    color: #ffffff;
+  }
+  /* SIDEBAR */
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 12rem;
+    height: 13vh;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar.navbar-nav a {
+    display: block;
+    margin: 1.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 30%;
+  }
+  #hamburger-menu {
+    display: block;
+    color: #ffffff;
+  }
+  /* sidebar */
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 12rem;
+    height: 40vh;
+    transition: 0.2s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0%;
+  }
+  .navbar .navbar-nav a {
+    display: block;
+    margin: 1.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}
+
+/* Footer */
+.links a {
+  margin-top: 3rem;
+  list-style: none;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+  color: var(--secondary);
+  text-decoration: none;
+  opacity: 0.65;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.container-links {
+  display: flex;
+  justify-content: center;
+}
+
+/* ROLEX PRODUCTS */
+
+.container-brand {
+  width: 100%;
+  height: 100vh;
+}
+
+.container-bege {
+  background-color: #000000;
+}
+
+.brands-title {
+  gap: 2rem;
+  padding-top: 100px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container-brand h1 {
+  font-family: "DM Serif Display";
+  display: flex;
+  letter-spacing: 3px;
+  font-weight: normal;
+  font-size: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+#brand-items {
+  color: #010101;
+  width: 200px;
+  height: 90px;
+  border-radius: 0px;
+  font-family: "DM Serif Display";
+  font-weight: normal;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  font-size: 62.5;
+  overflow-x: hidden;
+}
+
+body {
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.container .title {
+  font-size: 3.5rem;
+  color: #000000;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.container .product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min-max(30rem, 1fr));
+  gap: 2rem;
+}
+
+.container .product-container .product {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #ffffff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  outline: 0.1rem solid #a7a5a5;
+  outline-offset: -1.5rem;
+  cursor: pointer;
+}
+
+.container .product-container .product img {
+  height: 25rem;
+}
+
+.container .product-container .product p {
+  padding: 3rem 0;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.container .product-container .product .price {
+  font-size: 2.5rem;
+  color: #000000;
+}
+
+/* ROLEX PRODUCTS END */
+
+/* PATEK  */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.container .title1 {
+  margin-top: 5rem;
+  font-size: 3.5rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* PATEK END */
+
+/* CARTIER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.container .title2 {
+  margin-top: 5rem;
+  font-size: 3.5rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+/* CARTIER END */
+
+/* HUBLOT */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.container .title3 {
+  margin-top: 5rem;
+  font-size: 3.5rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+/* HUBLOT END */
+
+/* New Arrivals */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.container .title4 {
+  margin-top: 6rem;
+  font-size: 3.5rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+/* New Arrivals */
